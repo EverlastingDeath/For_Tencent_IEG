@@ -1,0 +1,48 @@
+ff_h264_decoder	main.cpp	/^extern AVCodec ff_h264_decoder;$/;"	x
+ff_h264_parser	main.cpp	/^extern AVCodecParser ff_h264_parser;$/;"	x
+MAX_PACK_SIZE	main.cpp	27;"	d	file:
+ImagePacket	main.cpp	/^struct ImagePacket {$/;"	s	file:
+buf_	main.cpp	/^    unsigned char *buf_;$/;"	m	struct:ImagePacket	file:
+len_	main.cpp	/^    int len_;$/;"	m	struct:ImagePacket	file:
+offset_	main.cpp	/^    int offset_;$/;"	m	struct:ImagePacket	file:
+end_	main.cpp	/^    int end_;$/;"	m	struct:ImagePacket	file:
+frame_index_	main.cpp	/^    unsigned int frame_index_;$/;"	m	struct:ImagePacket	file:
+gImagePacket	main.cpp	/^struct ImagePacket *gImagePacket = NULL;$/;"	v	typeref:struct:ImagePacket
+initPacket	main.cpp	/^void initPacket() {$/;"	f
+resetPacket	main.cpp	/^int resetPacket(struct ImagePacket *packetPtr) {$/;"	f
+kRtpOffset	main.cpp	/^const static int kRtpOffset = 14;$/;"	v	file:
+parseRTP	main.cpp	/^int parseRTP(const char *inBuff, int len, struct ImagePacket *packetPtr) {$/;"	f
+gCodec	main.cpp	/^AVCodec *gCodec = NULL;$/;"	v
+gCodec_ctx	main.cpp	/^AVCodecContext *gCodec_ctx = NULL;$/;"	v
+gParser	main.cpp	/^AVCodecParserContext *gParser = NULL;$/;"	v
+gAVFrame	main.cpp	/^AVFrame *gAVFrame = NULL;$/;"	v
+doAVCodecInit	main.cpp	/^void doAVCodecInit() {$/;"	f
+LOAD_YUV420P	main.cpp	167;"	d	file:
+HAS_BORDER	main.cpp	169;"	d	file:
+bpp	main.cpp	/^const int bpp = 12;$/;"	v
+screen_w	main.cpp	/^const int screen_w = 1280, screen_h = 720;$/;"	v
+screen_h	main.cpp	/^const int screen_w = 1280, screen_h = 720;$/;"	v
+pixel_w	main.cpp	/^const int pixel_w = 1918, pixel_h = 888;$/;"	v
+pixel_h	main.cpp	/^const int pixel_w = 1918, pixel_h = 888;$/;"	v
+gScreen	main.cpp	/^SDL_Window *gScreen = NULL;$/;"	v
+gSdlRenderer	main.cpp	/^SDL_Renderer *gSdlRenderer = NULL;$/;"	v
+gSdlTexture	main.cpp	/^SDL_Texture *gSdlTexture = NULL;$/;"	v
+sdlRect	main.cpp	/^SDL_Rect sdlRect;$/;"	v
+REFRESH_EVENT	main.cpp	186;"	d	file:
+BREAK_EVENT	main.cpp	187;"	d	file:
+thread_exit	main.cpp	/^int thread_exit = 0;$/;"	v
+sig_action	main.cpp	/^void sig_action() {$/;"	f
+refresh_video	main.cpp	/^int refresh_video(void *opaque) {$/;"	f
+doSDLInit	main.cpp	/^int doSDLInit() {$/;"	f
+UDP_PACK_SIZE	main.cpp	235;"	d	file:
+yuv_show	main.cpp	/^static void yuv_show(unsigned char *buf[], int wrap[], int xsize, int ysize) {$/;"	f	file:
+doDecodeFrame	main.cpp	/^static int doDecodeFrame(AVPacket *pkt, unsigned int frame_index) {$/;"	f	file:
+doPackDecode	main.cpp	/^int doPackDecode(struct ImagePacket *packetPtr) {$/;"	f
+recv_frame	main.cpp	/^void recv_frame(int sockfd) {$/;"	f
+udp_server	main.cpp	/^int udp_server(int port,const string& addr) {$/;"	f
+main	main.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+SRCS	Makefile	/^SRCS := $(shell find . -name "*.c" -not -name "*_template.c")$/;"	m
+TARGET	Makefile	/^TARGET=viewer$/;"	m
+CFLAGS	Makefile	/^CFLAGS := -g -I.\/ffmpeg-src -O0 -w -std=c99 -Wno-implicit-function-declaration -D_GNU_SOURCE$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS := -lm -L\/usr\/local\/lib -L\/usr\/local\/Cellar\/sdl2\/2.0.8\/lib -lSDL2$/;"	m
+OBJS	Makefile	/^OBJS := $(SRCS:%.c=%.o)$/;"	m
