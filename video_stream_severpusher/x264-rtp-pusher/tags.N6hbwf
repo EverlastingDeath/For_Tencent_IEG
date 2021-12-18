@@ -1,0 +1,10 @@
+PROJECT	Makefile	/^PROJECT = bin\/video-pusher$/;"	m
+CC	Makefile	/^CC=gcc -std=c++11 -g$/;"	m
+FFMPEG	Makefile	/^FFMPEG=\/usr\/local\/ffmpeg$/;"	m
+SHARED_FLAG	Makefile	/^SHARED_FLAG = -fPIC -shared$/;"	m
+OBJDIR	Makefile	/^OBJDIR = .\/obj\/$/;"	m
+LIB	Makefile	/^LIB  = -Wl,-E$/;"	m
+LIB	Makefile	/^LIB = -L\/usr\/local\/lib -lopencv_video -lopencv_highgui -lopencv_videoio -lopencv_core -lopencv_imgcodecs -lopencv_imgproc$/;"	m
+INC	Makefile	/^INC  = -I.\/src$/;"	m
+CPP_SRCS	Makefile	/^CPP_SRCS = $(foreach d,$(SRCS),$(wildcard $(d)\/*.cpp))$/;"	m
+OBJS	Makefile	/^OBJS = $(addprefix $(OBJDIR), $(patsubst %.cpp, %.o, $(CPP_SRCS)))$/;"	m
